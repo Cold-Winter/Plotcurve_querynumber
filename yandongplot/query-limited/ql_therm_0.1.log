@@ -1,0 +1,2341 @@
+2018-11-02 11:28:22.148212: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+2018-11-02 11:28:30.549388: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Found device 0 with properties: 
+name: Graphics Device major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:3b:00.0
+totalMemory: 11.90GiB freeMemory: 11.75GiB
+2018-11-02 11:28:35.914184: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Found device 1 with properties: 
+name: Graphics Device major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:86:00.0
+totalMemory: 11.90GiB freeMemory: 11.75GiB
+2018-11-02 11:28:37.105122: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1045] Device peer to peer matrix
+2018-11-02 11:28:37.105282: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1051] DMA: 0 1 
+2018-11-02 11:28:37.105307: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1061] 0:   Y N 
+2018-11-02 11:28:37.105324: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1061] 1:   N Y 
+2018-11-02 11:28:37.105363: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: Graphics Device, pci bus id: 0000:3b:00.0, compute capability: 6.1)
+2018-11-02 11:28:37.105385: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:1) -> (device: 1, name: Graphics Device, pci bus id: 0000:86:00.0, compute capability: 6.1)
+2018-11-02 11:28:40.319933: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: Graphics Device, pci bus id: 0000:3b:00.0, compute capability: 6.1)
+2018-11-02 11:28:40.319985: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:1) -> (device: 1, name: Graphics Device, pci bus id: 0000:86:00.0, compute capability: 6.1)
+/home/yandong/anaconda3/lib/python3.6/importlib/_bootstrap.py:219: RuntimeWarning: compiletime version 3.5 of module 'tensorflow.python.framework.fast_tensor_util' does not match runtime version 3.6
+  return f(*args, **kwds)
+/home/yandong/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+/ssd/re_attack/limited-blackbox-attacks/therm/attacks_cifar10.py:14: UserWarning: 
+This call to matplotlib.use() has no effect because the backend has already
+been chosen; matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+The backend was *originally* set to 'Qt5Agg' by the following code:
+  File "main.py", line 9, in <module>
+    import attacks_cifar10 as attacks
+  File "/ssd/re_attack/limited-blackbox-attacks/therm/attacks_cifar10.py", line 4, in <module>
+    from tools.utils import *
+  File "/ssd/re_attack/limited-blackbox-attacks/therm/tools/utils.py", line 7, in <module>
+    from matplotlib import pyplot as plt
+  File "/home/yandong/anaconda3/lib/python3.6/site-packages/matplotlib/pyplot.py", line 72, in <module>
+    from matplotlib.backends import pylab_setup
+  File "/home/yandong/anaconda3/lib/python3.6/site-packages/matplotlib/backends/__init__.py", line 14, in <module>
+    line for line in traceback.format_stack()
+
+
+  matplotlib.use('Agg')
+WARNING:tensorflow:From /ssd/re_attack/limited-blackbox-attacks/therm/cifar_model.py:214: UniformUnitScaling.__init__ (from tensorflow.python.ops.init_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.initializers.variance_scaling instead with distribution=uniform to get equivalent behavior.
+{"samples_per_draw": 608, "batch_size": 608, "target_class": null, "orig_class": null, "sigma": 0.1, "epsilon": 0.031, "learning_rate": 0.01, "img_path": null, "img_index": 0, "out_dir": "query_limited/", "log_iters": 1, "restore": null, "momentum": 0.0, "max_queries": 400, "save_iters": 50, "plateau_drop": 2.0, "min_lr_ratio": 200, "plateau_length": 5, "gpus": null, "imagenet_path": null, "visualize": false, "max_lr": 0.01, "min_lr": 5e-05, "top_k": -1, "adv_thresh": -1.0, "label_only": false, "zero_iters": 100, "label_only_sigma": 0.001, "starting_eps": 1.0, "starting_delta_eps": 0.5, "min_delta_eps": 0.1, "conservative": 2, "cifar_path": "../cifar10_data/test_batch", "start": 0, "end": 100}
+attacking image index : 0
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -3.3218 lr 1.00E-02 eps 0.031 (time 20.6968)
+[log] early stopping at iteration 6
+clipimage succImages: 1  totalImages: 1
+attacking image index : 1
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -1.3890 lr 1.00E-02 eps 0.031 (time 0.3460)
+Step 00010: loss -5.4787 lr 1.00E-02 eps 0.031 (time 0.1149)
+Step 00020: loss -6.6678 lr 1.00E-02 eps 0.031 (time 0.2010)
+[log] Annealing max_lr
+Step 00030: loss -7.5700 lr 5.00E-03 eps 0.031 (time 0.1006)
+[log] Annealing max_lr
+Step 00040: loss -8.0392 lr 2.50E-03 eps 0.031 (time 0.1885)
+Step 00050: loss -8.9944 lr 2.50E-03 eps 0.031 (time 0.1962)
+[log] Annealing max_lr
+[log] Annealing max_lr
+Step 00060: loss -9.1626 lr 6.25E-04 eps 0.031 (time 0.1002)
+[log] Annealing max_lr
+Step 00070: loss -9.5901 lr 3.13E-04 eps 0.031 (time 0.2072)
+[log] Annealing max_lr
+[log] Annealing max_lr
+Step 00080: loss -9.6231 lr 7.81E-05 eps 0.031 (time 0.1777)
+[log] Annealing max_lr
+Step 00090: loss -9.5781 lr 5.00E-05 eps 0.031 (time 0.1119)
+Step 00100: loss -9.5669 lr 5.00E-05 eps 0.031 (time 0.1593)
+Step 00110: loss -9.6143 lr 5.00E-05 eps 0.031 (time 0.1856)
+Step 00120: loss -9.5420 lr 5.00E-05 eps 0.031 (time 0.1036)
+Step 00130: loss -9.7573 lr 5.00E-05 eps 0.031 (time 0.1037)
+Step 00140: loss -9.6199 lr 5.00E-05 eps 0.031 (time 0.2903)
+Step 00150: loss -9.8263 lr 5.00E-05 eps 0.031 (time 0.1600)
+Step 00160: loss -9.6296 lr 5.00E-05 eps 0.031 (time 0.1010)
+Step 00170: loss -9.8515 lr 5.00E-05 eps 0.031 (time 0.2001)
+Step 00180: loss -10.0443 lr 5.00E-05 eps 0.031 (time 0.1545)
+Step 00190: loss -10.0393 lr 5.00E-05 eps 0.031 (time 0.1001)
+Step 00200: loss -9.8953 lr 5.00E-05 eps 0.031 (time 0.1031)
+Step 00210: loss -9.9105 lr 5.00E-05 eps 0.031 (time 0.1256)
+Step 00220: loss -9.8176 lr 5.00E-05 eps 0.031 (time 0.1464)
+Step 00230: loss -9.7524 lr 5.00E-05 eps 0.031 (time 0.1026)
+Step 00240: loss -9.9229 lr 5.00E-05 eps 0.031 (time 0.1526)
+Step 00250: loss -9.9256 lr 5.00E-05 eps 0.031 (time 0.1142)
+Step 00260: loss -9.9898 lr 5.00E-05 eps 0.031 (time 0.1873)
+Step 00270: loss -9.8772 lr 5.00E-05 eps 0.031 (time 0.1152)
+Step 00280: loss -10.0888 lr 5.00E-05 eps 0.031 (time 0.1641)
+Step 00290: loss -10.0597 lr 5.00E-05 eps 0.031 (time 0.1039)
+Step 00300: loss -9.9064 lr 5.00E-05 eps 0.031 (time 0.1844)
+Step 00310: loss -9.9836 lr 5.00E-05 eps 0.031 (time 0.1735)
+Step 00320: loss -10.1360 lr 5.00E-05 eps 0.031 (time 0.1048)
+Step 00330: loss -10.1509 lr 5.00E-05 eps 0.031 (time 0.1912)
+Step 00340: loss -10.0183 lr 5.00E-05 eps 0.031 (time 0.2452)
+Step 00350: loss -10.2071 lr 5.00E-05 eps 0.031 (time 0.1117)
+Step 00360: loss -10.1827 lr 5.00E-05 eps 0.031 (time 0.1456)
+Step 00370: loss -10.0988 lr 5.00E-05 eps 0.031 (time 0.2583)
+Step 00380: loss -9.9733 lr 5.00E-05 eps 0.031 (time 0.0986)
+Step 00390: loss -10.2687 lr 5.00E-05 eps 0.031 (time 0.1198)
+Step 00400: loss -10.2744 lr 5.00E-05 eps 0.031 (time 0.1137)
+Step 00410: loss -10.1200 lr 5.00E-05 eps 0.031 (time 0.1362)
+Step 00420: loss -10.1571 lr 5.00E-05 eps 0.031 (time 0.1439)
+Step 00430: loss -10.1695 lr 5.00E-05 eps 0.031 (time 0.1104)
+Step 00440: loss -10.1856 lr 5.00E-05 eps 0.031 (time 0.1738)
+Step 00450: loss -10.2260 lr 5.00E-05 eps 0.031 (time 0.1526)
+Step 00460: loss -10.2833 lr 5.00E-05 eps 0.031 (time 0.1077)
+Step 00470: loss -10.4319 lr 5.00E-05 eps 0.031 (time 0.1973)
+Step 00480: loss -10.3031 lr 5.00E-05 eps 0.031 (time 0.2214)
+Step 00490: loss -10.3896 lr 5.00E-05 eps 0.031 (time 0.1587)
+Step 00500: loss -10.3117 lr 5.00E-05 eps 0.031 (time 0.1094)
+Step 00510: loss -10.3296 lr 5.00E-05 eps 0.031 (time 0.2218)
+Step 00520: loss -10.2703 lr 5.00E-05 eps 0.031 (time 0.1527)
+Step 00530: loss -10.4913 lr 5.00E-05 eps 0.031 (time 0.1126)
+[log] early stopping at iteration 537
+clipimage succImages: 2  totalImages: 2
+attacking image index : 2
+chose pseudorandom target class: 6
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -5.7971 lr 1.00E-02 eps 0.031 (time 0.3516)
+[log] early stopping at iteration 1
+clipimage succImages: 3  totalImages: 3
+attacking image index : 3
+chose pseudorandom target class: 8
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -2.7035 lr 1.00E-02 eps 0.031 (time 0.3002)
+[log] early stopping at iteration 3
+clipimage succImages: 4  totalImages: 4
+attacking image index : 4
+chose pseudorandom target class: 7
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0240 lr 1.00E-02 eps 0.031 (time 0.4258)
+Step 00010: loss -0.5876 lr 1.00E-02 eps 0.031 (time 0.1492)
+[log] early stopping at iteration 11
+clipimage succImages: 5  totalImages: 5
+attacking image index : 5
+chose pseudorandom target class: 3
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0053 lr 1.00E-02 eps 0.031 (time 0.4696)
+Step 00010: loss -0.0408 lr 1.00E-02 eps 0.031 (time 0.1678)
+[log] Annealing max_lr
+Step 00020: loss -0.1625 lr 5.00E-03 eps 0.031 (time 0.1244)
+Step 00030: loss -0.3491 lr 5.00E-03 eps 0.031 (time 0.2028)
+[log] early stopping at iteration 36
+clipimage succImages: 6  totalImages: 6
+attacking image index : 6
+chose pseudorandom target class: 9
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0407 lr 1.00E-02 eps 0.031 (time 0.5926)
+[log] early stopping at iteration 9
+clipimage succImages: 7  totalImages: 7
+attacking image index : 7
+chose pseudorandom target class: 4
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.1512 lr 1.00E-02 eps 0.031 (time 0.5855)
+[log] early stopping at iteration 10
+clipimage succImages: 8  totalImages: 8
+attacking image index : 8
+chose pseudorandom target class: 4
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -4.8592 lr 1.00E-02 eps 0.031 (time 0.5961)
+Step 00010: loss -8.8527 lr 1.00E-02 eps 0.031 (time 0.1594)
+[log] early stopping at iteration 11
+clipimage succImages: 9  totalImages: 9
+attacking image index : 9
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -5.4596 lr 1.00E-02 eps 0.031 (time 0.5249)
+[log] early stopping at iteration 7
+clipimage succImages: 10  totalImages: 10
+attacking image index : 10
+chose pseudorandom target class: 9
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -7.1517 lr 1.00E-02 eps 0.031 (time 0.8412)
+Step 00010: loss -11.4577 lr 1.00E-02 eps 0.031 (time 0.1799)
+[log] early stopping at iteration 19
+clipimage succImages: 11  totalImages: 11
+attacking image index : 11
+chose pseudorandom target class: 0
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0809 lr 1.00E-02 eps 0.031 (time 0.7007)
+Step 00010: loss -2.2405 lr 1.00E-02 eps 0.031 (time 0.2047)
+Step 00020: loss -3.9302 lr 1.00E-02 eps 0.031 (time 0.1360)
+[log] Annealing max_lr
+Step 00030: loss -5.2390 lr 5.00E-03 eps 0.031 (time 0.1051)
+Step 00040: loss -6.5887 lr 5.00E-03 eps 0.031 (time 0.1376)
+[log] early stopping at iteration 43
+clipimage succImages: 12  totalImages: 12
+attacking image index : 12
+chose pseudorandom target class: 6
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -13.5162 lr 1.00E-02 eps 0.031 (time 0.7891)
+[log] early stopping at iteration 7
+clipimage succImages: 13  totalImages: 13
+attacking image index : 13
+chose pseudorandom target class: 2
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.6798 lr 1.00E-02 eps 0.031 (time 0.7884)
+[log] early stopping at iteration 7
+clipimage succImages: 14  totalImages: 14
+attacking image index : 14
+chose pseudorandom target class: 8
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.6282 lr 1.00E-02 eps 0.031 (time 0.8297)
+Step 00010: loss -6.1250 lr 1.00E-02 eps 0.031 (time 0.1152)
+Step 00020: loss -7.6357 lr 1.00E-02 eps 0.031 (time 0.1900)
+[log] Annealing max_lr
+Step 00030: loss -8.9547 lr 5.00E-03 eps 0.031 (time 0.2090)
+[log] early stopping at iteration 33
+clipimage succImages: 15  totalImages: 15
+attacking image index : 15
+chose pseudorandom target class: 5
+Called
+restored
+skip the wrong example  15
+clipimage succImages: 15  totalImages: 15
+attacking image index : 16
+chose pseudorandom target class: 9
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -10.2806 lr 1.00E-02 eps 0.031 (time 0.8587)
+[log] early stopping at iteration 7
+clipimage succImages: 16  totalImages: 16
+attacking image index : 17
+chose pseudorandom target class: 1
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -2.2134 lr 1.00E-02 eps 0.031 (time 0.9551)
+[log] early stopping at iteration 3
+clipimage succImages: 17  totalImages: 17
+attacking image index : 18
+chose pseudorandom target class: 3
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.2085 lr 1.00E-02 eps 0.031 (time 0.9957)
+Step 00010: loss -3.5452 lr 1.00E-02 eps 0.031 (time 0.1699)
+Step 00020: loss -5.0608 lr 1.00E-02 eps 0.031 (time 0.1192)
+[log] early stopping at iteration 25
+clipimage succImages: 18  totalImages: 18
+attacking image index : 19
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0001 lr 1.00E-02 eps 0.031 (time 1.0631)
+[log] Annealing max_lr
+Step 00010: loss -0.0006 lr 5.00E-03 eps 0.031 (time 0.1601)
+[log] Annealing max_lr
+Step 00020: loss -0.0036 lr 2.50E-03 eps 0.031 (time 0.2072)
+[log] Annealing max_lr
+[log] Annealing max_lr
+Step 00030: loss -0.0034 lr 6.25E-04 eps 0.031 (time 0.1807)
+[log] Annealing max_lr
+Step 00040: loss -0.0064 lr 3.13E-04 eps 0.031 (time 0.1154)
+[log] Annealing max_lr
+[log] Annealing max_lr
+Step 00050: loss -0.0096 lr 7.81E-05 eps 0.031 (time 0.1702)
+[log] Annealing max_lr
+Step 00060: loss -0.0042 lr 5.00E-05 eps 0.031 (time 0.2307)
+Step 00070: loss -0.0062 lr 5.00E-05 eps 0.031 (time 0.1195)
+Step 00080: loss -0.0053 lr 5.00E-05 eps 0.031 (time 0.0993)
+Step 00090: loss -0.0049 lr 5.00E-05 eps 0.031 (time 0.1843)
+Step 00100: loss -0.0040 lr 5.00E-05 eps 0.031 (time 0.1604)
+Step 00110: loss -0.0047 lr 5.00E-05 eps 0.031 (time 0.1012)
+Step 00120: loss -0.0062 lr 5.00E-05 eps 0.031 (time 0.1180)
+Step 00130: loss -0.0088 lr 5.00E-05 eps 0.031 (time 0.1435)
+Step 00140: loss -0.0110 lr 5.00E-05 eps 0.031 (time 0.1431)
+Step 00150: loss -0.0116 lr 5.00E-05 eps 0.031 (time 0.1098)
+Step 00160: loss -0.0113 lr 5.00E-05 eps 0.031 (time 0.1469)
+Step 00170: loss -0.0105 lr 5.00E-05 eps 0.031 (time 0.1746)
+Step 00180: loss -0.0066 lr 5.00E-05 eps 0.031 (time 0.0987)
+Step 00190: loss -0.0094 lr 5.00E-05 eps 0.031 (time 0.1807)
+Step 00200: loss -0.0035 lr 5.00E-05 eps 0.031 (time 0.1960)
+Step 00210: loss -0.0100 lr 5.00E-05 eps 0.031 (time 0.1033)
+Step 00220: loss -0.0057 lr 5.00E-05 eps 0.031 (time 0.1950)
+Step 00230: loss -0.0062 lr 5.00E-05 eps 0.031 (time 0.2174)
+Step 00240: loss -0.0144 lr 5.00E-05 eps 0.031 (time 0.0998)
+Step 00250: loss -0.0114 lr 5.00E-05 eps 0.031 (time 0.1743)
+Step 00260: loss -0.0169 lr 5.00E-05 eps 0.031 (time 0.1952)
+Step 00270: loss -0.0157 lr 5.00E-05 eps 0.031 (time 0.1268)
+Step 00280: loss -0.0111 lr 5.00E-05 eps 0.031 (time 0.1120)
+Step 00290: loss -0.0095 lr 5.00E-05 eps 0.031 (time 0.1857)
+Step 00300: loss -0.0113 lr 5.00E-05 eps 0.031 (time 0.0997)
+Step 00310: loss -0.0167 lr 5.00E-05 eps 0.031 (time 0.1215)
+Step 00320: loss -0.0090 lr 5.00E-05 eps 0.031 (time 0.2077)
+Step 00330: loss -0.0130 lr 5.00E-05 eps 0.031 (time 0.1842)
+Step 00340: loss -0.0078 lr 5.00E-05 eps 0.031 (time 0.2113)
+Step 00350: loss -0.0125 lr 5.00E-05 eps 0.031 (time 0.1975)
+Step 00360: loss -0.0094 lr 5.00E-05 eps 0.031 (time 0.2110)
+Step 00370: loss -0.0143 lr 5.00E-05 eps 0.031 (time 0.1877)
+Step 00380: loss -0.0126 lr 5.00E-05 eps 0.031 (time 0.1479)
+Step 00390: loss -0.0122 lr 5.00E-05 eps 0.031 (time 0.1000)
+Step 00400: loss -0.0169 lr 5.00E-05 eps 0.031 (time 0.2562)
+Step 00410: loss -0.0122 lr 5.00E-05 eps 0.031 (time 0.1779)
+Step 00420: loss -0.0151 lr 5.00E-05 eps 0.031 (time 0.0955)
+Step 00430: loss -0.0165 lr 5.00E-05 eps 0.031 (time 0.1707)
+Step 00440: loss -0.0107 lr 5.00E-05 eps 0.031 (time 0.2095)
+Step 00450: loss -0.0130 lr 5.00E-05 eps 0.031 (time 0.1375)
+Step 00460: loss -0.0178 lr 5.00E-05 eps 0.031 (time 0.2534)
+Step 00470: loss -0.0281 lr 5.00E-05 eps 0.031 (time 0.2004)
+Step 00480: loss -0.0118 lr 5.00E-05 eps 0.031 (time 0.1942)
+Step 00490: loss -0.0140 lr 5.00E-05 eps 0.031 (time 0.1088)
+Step 00500: loss -0.0180 lr 5.00E-05 eps 0.031 (time 0.2128)
+Step 00510: loss -0.0078 lr 5.00E-05 eps 0.031 (time 0.1453)
+Step 00520: loss -0.0154 lr 5.00E-05 eps 0.031 (time 0.0961)
+Step 00530: loss -0.0152 lr 5.00E-05 eps 0.031 (time 0.1311)
+Step 00540: loss -0.0116 lr 5.00E-05 eps 0.031 (time 0.1597)
+Step 00550: loss -0.0154 lr 5.00E-05 eps 0.031 (time 0.1094)
+Step 00560: loss -0.0123 lr 5.00E-05 eps 0.031 (time 0.1066)
+Step 00570: loss -0.0321 lr 5.00E-05 eps 0.031 (time 0.1794)
+Step 00580: loss -0.0170 lr 5.00E-05 eps 0.031 (time 0.1078)
+Step 00590: loss -0.0131 lr 5.00E-05 eps 0.031 (time 0.1051)
+clipimage succImages: 18  totalImages: 19
+attacking image index : 20
+chose pseudorandom target class: 3
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -8.5808 lr 1.00E-02 eps 0.031 (time 1.3050)
+[log] early stopping at iteration 2
+clipimage succImages: 19  totalImages: 20
+attacking image index : 21
+chose pseudorandom target class: 9
+Called
+restored
+skip the wrong example  21
+clipimage succImages: 19  totalImages: 20
+attacking image index : 22
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -6.8919 lr 1.00E-02 eps 0.031 (time 1.1968)
+[log] early stopping at iteration 4
+clipimage succImages: 20  totalImages: 21
+attacking image index : 23
+chose pseudorandom target class: 3
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0003 lr 1.00E-02 eps 0.031 (time 1.2112)
+[log] Annealing max_lr
+Step 00010: loss -0.0010 lr 5.00E-03 eps 0.031 (time 0.2293)
+[log] Annealing max_lr
+Step 00020: loss -0.0032 lr 2.50E-03 eps 0.031 (time 0.1296)
+[log] Annealing max_lr
+Step 00030: loss -0.0098 lr 1.25E-03 eps 0.031 (time 0.1196)
+[log] Annealing max_lr
+Step 00040: loss -0.0137 lr 6.25E-04 eps 0.031 (time 0.1910)
+[log] Annealing max_lr
+[log] Annealing max_lr
+Step 00050: loss -0.0133 lr 1.56E-04 eps 0.031 (time 0.1562)
+[log] Annealing max_lr
+[log] Annealing max_lr
+Step 00060: loss -0.0120 lr 5.00E-05 eps 0.031 (time 0.1051)
+Step 00070: loss -0.0165 lr 5.00E-05 eps 0.031 (time 0.1986)
+Step 00080: loss -0.0195 lr 5.00E-05 eps 0.031 (time 0.1638)
+Step 00090: loss -0.0221 lr 5.00E-05 eps 0.031 (time 0.1025)
+Step 00100: loss -0.0247 lr 5.00E-05 eps 0.031 (time 0.1070)
+Step 00110: loss -0.0223 lr 5.00E-05 eps 0.031 (time 0.1822)
+Step 00120: loss -0.0247 lr 5.00E-05 eps 0.031 (time 0.2010)
+Step 00130: loss -0.0180 lr 5.00E-05 eps 0.031 (time 0.1088)
+Step 00140: loss -0.0181 lr 5.00E-05 eps 0.031 (time 0.1890)
+Step 00150: loss -0.0269 lr 5.00E-05 eps 0.031 (time 0.1955)
+Step 00160: loss -0.0274 lr 5.00E-05 eps 0.031 (time 0.1210)
+Step 00170: loss -0.0175 lr 5.00E-05 eps 0.031 (time 0.1902)
+Step 00180: loss -0.0238 lr 5.00E-05 eps 0.031 (time 0.1705)
+Step 00190: loss -0.0187 lr 5.00E-05 eps 0.031 (time 0.1011)
+Step 00200: loss -0.0314 lr 5.00E-05 eps 0.031 (time 0.2213)
+Step 00210: loss -0.0350 lr 5.00E-05 eps 0.031 (time 0.2617)
+Step 00220: loss -0.0248 lr 5.00E-05 eps 0.031 (time 0.1203)
+Step 00230: loss -0.0264 lr 5.00E-05 eps 0.031 (time 0.1804)
+Step 00240: loss -0.0290 lr 5.00E-05 eps 0.031 (time 0.2065)
+Step 00250: loss -0.0265 lr 5.00E-05 eps 0.031 (time 0.1203)
+Step 00260: loss -0.0324 lr 5.00E-05 eps 0.031 (time 0.1661)
+Step 00270: loss -0.0266 lr 5.00E-05 eps 0.031 (time 0.1777)
+Step 00280: loss -0.0202 lr 5.00E-05 eps 0.031 (time 0.1045)
+Step 00290: loss -0.0320 lr 5.00E-05 eps 0.031 (time 0.0929)
+Step 00300: loss -0.0331 lr 5.00E-05 eps 0.031 (time 0.1012)
+Step 00310: loss -0.0318 lr 5.00E-05 eps 0.031 (time 0.1502)
+Step 00320: loss -0.0353 lr 5.00E-05 eps 0.031 (time 0.1393)
+Step 00330: loss -0.0372 lr 5.00E-05 eps 0.031 (time 0.0938)
+Step 00340: loss -0.0475 lr 5.00E-05 eps 0.031 (time 0.2417)
+Step 00350: loss -0.0298 lr 5.00E-05 eps 0.031 (time 0.1614)
+Step 00360: loss -0.0285 lr 5.00E-05 eps 0.031 (time 0.0981)
+Step 00370: loss -0.0375 lr 5.00E-05 eps 0.031 (time 0.1146)
+Step 00380: loss -0.0375 lr 5.00E-05 eps 0.031 (time 0.2001)
+Step 00390: loss -0.0223 lr 5.00E-05 eps 0.031 (time 0.1402)
+Step 00400: loss -0.0312 lr 5.00E-05 eps 0.031 (time 0.1206)
+Step 00410: loss -0.0362 lr 5.00E-05 eps 0.031 (time 0.2144)
+Step 00420: loss -0.0358 lr 5.00E-05 eps 0.031 (time 0.1391)
+Step 00430: loss -0.0379 lr 5.00E-05 eps 0.031 (time 0.1162)
+Step 00440: loss -0.0502 lr 5.00E-05 eps 0.031 (time 0.1729)
+Step 00450: loss -0.0456 lr 5.00E-05 eps 0.031 (time 0.1258)
+Step 00460: loss -0.0319 lr 5.00E-05 eps 0.031 (time 0.1109)
+Step 00470: loss -0.0473 lr 5.00E-05 eps 0.031 (time 0.1874)
+Step 00480: loss -0.0527 lr 5.00E-05 eps 0.031 (time 0.1640)
+Step 00490: loss -0.0360 lr 5.00E-05 eps 0.031 (time 0.1034)
+Step 00500: loss -0.0446 lr 5.00E-05 eps 0.031 (time 0.2082)
+Step 00510: loss -0.0474 lr 5.00E-05 eps 0.031 (time 0.1668)
+Step 00520: loss -0.0499 lr 5.00E-05 eps 0.031 (time 0.1172)
+Step 00530: loss -0.0540 lr 5.00E-05 eps 0.031 (time 0.2008)
+Step 00540: loss -0.0476 lr 5.00E-05 eps 0.031 (time 0.1120)
+Step 00550: loss -0.0587 lr 5.00E-05 eps 0.031 (time 0.1661)
+Step 00560: loss -0.0448 lr 5.00E-05 eps 0.031 (time 0.1089)
+Step 00570: loss -0.0485 lr 5.00E-05 eps 0.031 (time 0.1726)
+Step 00580: loss -0.0482 lr 5.00E-05 eps 0.031 (time 0.1679)
+Step 00590: loss -0.0581 lr 5.00E-05 eps 0.031 (time 0.1527)
+clipimage succImages: 20  totalImages: 22
+attacking image index : 24
+chose pseudorandom target class: 2
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -9.9476 lr 1.00E-02 eps 0.031 (time 1.2946)
+[log] early stopping at iteration 1
+clipimage succImages: 21  totalImages: 23
+attacking image index : 25
+chose pseudorandom target class: 4
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.7255 lr 1.00E-02 eps 0.031 (time 1.2851)
+[log] early stopping at iteration 3
+clipimage succImages: 22  totalImages: 24
+attacking image index : 26
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -4.4163 lr 1.00E-02 eps 0.031 (time 1.3285)
+[log] early stopping at iteration 9
+clipimage succImages: 23  totalImages: 25
+attacking image index : 27
+chose pseudorandom target class: 3
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -5.3834 lr 1.00E-02 eps 0.031 (time 1.5309)
+[log] early stopping at iteration 5
+clipimage succImages: 24  totalImages: 26
+attacking image index : 28
+chose pseudorandom target class: 1
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -2.4235 lr 1.00E-02 eps 0.031 (time 1.3611)
+[log] early stopping at iteration 9
+clipimage succImages: 25  totalImages: 27
+attacking image index : 29
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0024 lr 1.00E-02 eps 0.031 (time 1.5128)
+Step 00010: loss -0.0241 lr 1.00E-02 eps 0.031 (time 0.2148)
+Step 00020: loss -0.1056 lr 1.00E-02 eps 0.031 (time 0.1120)
+[log] early stopping at iteration 30
+clipimage succImages: 26  totalImages: 28
+attacking image index : 30
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0813 lr 1.00E-02 eps 0.031 (time 1.7197)
+[log] early stopping at iteration 6
+clipimage succImages: 27  totalImages: 29
+attacking image index : 31
+chose pseudorandom target class: 2
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -10.1408 lr 1.00E-02 eps 0.031 (time 1.5320)
+[log] early stopping at iteration 3
+clipimage succImages: 28  totalImages: 30
+attacking image index : 32
+chose pseudorandom target class: 7
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -2.9362 lr 1.00E-02 eps 0.031 (time 1.6206)
+[log] early stopping at iteration 1
+clipimage succImages: 29  totalImages: 31
+attacking image index : 33
+chose pseudorandom target class: 4
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -8.9902 lr 1.00E-02 eps 0.031 (time 1.7179)
+[log] early stopping at iteration 7
+clipimage succImages: 30  totalImages: 32
+attacking image index : 34
+chose pseudorandom target class: 1
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.8819 lr 1.00E-02 eps 0.031 (time 1.7392)
+Step 00010: loss -4.4094 lr 1.00E-02 eps 0.031 (time 0.1509)
+Step 00020: loss -5.4991 lr 1.00E-02 eps 0.031 (time 0.2025)
+[log] Annealing max_lr
+Step 00030: loss -5.6625 lr 5.00E-03 eps 0.031 (time 0.1090)
+[log] Annealing max_lr
+Step 00040: loss -6.5561 lr 2.50E-03 eps 0.031 (time 0.1904)
+Step 00050: loss -7.3601 lr 2.50E-03 eps 0.031 (time 0.1854)
+[log] early stopping at iteration 51
+clipimage succImages: 31  totalImages: 33
+attacking image index : 35
+chose pseudorandom target class: 9
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -2.0888 lr 1.00E-02 eps 0.031 (time 1.9548)
+[log] early stopping at iteration 2
+clipimage succImages: 32  totalImages: 34
+attacking image index : 36
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -1.7803 lr 1.00E-02 eps 0.031 (time 1.8495)
+[log] early stopping at iteration 7
+clipimage succImages: 33  totalImages: 35
+attacking image index : 37
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -1.9257 lr 1.00E-02 eps 0.031 (time 2.0359)
+[log] early stopping at iteration 2
+clipimage succImages: 34  totalImages: 36
+attacking image index : 38
+chose pseudorandom target class: 1
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0126 lr 1.00E-02 eps 0.031 (time 1.9099)
+Step 00010: loss -0.4212 lr 1.00E-02 eps 0.031 (time 0.1640)
+Step 00020: loss -1.7865 lr 1.00E-02 eps 0.031 (time 0.1997)
+[log] Annealing max_lr
+Step 00030: loss -2.0880 lr 5.00E-03 eps 0.031 (time 0.1485)
+Step 00040: loss -3.2033 lr 5.00E-03 eps 0.031 (time 0.1030)
+[log] early stopping at iteration 45
+clipimage succImages: 35  totalImages: 37
+attacking image index : 39
+chose pseudorandom target class: 9
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -11.4718 lr 1.00E-02 eps 0.031 (time 2.0458)
+Step 00010: loss -18.5877 lr 1.00E-02 eps 0.031 (time 0.1148)
+Step 00020: loss -19.7697 lr 1.00E-02 eps 0.031 (time 0.2767)
+[log] early stopping at iteration 22
+clipimage succImages: 36  totalImages: 38
+attacking image index : 40
+chose pseudorandom target class: 6
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -1.4277 lr 1.00E-02 eps 0.031 (time 2.3006)
+[log] early stopping at iteration 5
+clipimage succImages: 37  totalImages: 39
+attacking image index : 41
+chose pseudorandom target class: 0
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0088 lr 1.00E-02 eps 0.031 (time 1.9295)
+Step 00010: loss -0.1152 lr 1.00E-02 eps 0.031 (time 0.1156)
+Step 00020: loss -0.4379 lr 1.00E-02 eps 0.031 (time 0.1047)
+[log] early stopping at iteration 22
+clipimage succImages: 38  totalImages: 40
+attacking image index : 42
+chose pseudorandom target class: 6
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -5.3710 lr 1.00E-02 eps 0.031 (time 2.4555)
+[log] early stopping at iteration 1
+clipimage succImages: 39  totalImages: 41
+attacking image index : 43
+chose pseudorandom target class: 4
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0053 lr 1.00E-02 eps 0.031 (time 2.1843)
+Step 00010: loss -0.0387 lr 1.00E-02 eps 0.031 (time 0.2237)
+[log] Annealing max_lr
+Step 00020: loss -0.1086 lr 5.00E-03 eps 0.031 (time 0.1535)
+Step 00030: loss -0.2016 lr 5.00E-03 eps 0.031 (time 0.1924)
+Step 00040: loss -0.3666 lr 5.00E-03 eps 0.031 (time 0.1772)
+[log] early stopping at iteration 42
+clipimage succImages: 40  totalImages: 42
+attacking image index : 44
+chose pseudorandom target class: 4
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.4970 lr 1.00E-02 eps 0.031 (time 2.0951)
+[log] early stopping at iteration 9
+clipimage succImages: 41  totalImages: 43
+attacking image index : 45
+chose pseudorandom target class: 3
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.2065 lr 1.00E-02 eps 0.031 (time 2.3876)
+Step 00010: loss -4.3589 lr 1.00E-02 eps 0.031 (time 0.1973)
+Step 00020: loss -6.4601 lr 1.00E-02 eps 0.031 (time 0.0919)
+[log] Annealing max_lr
+[log] early stopping at iteration 29
+clipimage succImages: 42  totalImages: 44
+attacking image index : 46
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -3.7189 lr 1.00E-02 eps 0.031 (time 2.3157)
+[log] early stopping at iteration 6
+clipimage succImages: 43  totalImages: 45
+attacking image index : 47
+chose pseudorandom target class: 7
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -3.3154 lr 1.00E-02 eps 0.031 (time 2.2326)
+[log] early stopping at iteration 1
+clipimage succImages: 44  totalImages: 46
+attacking image index : 48
+chose pseudorandom target class: 0
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -8.9724 lr 1.00E-02 eps 0.031 (time 2.2617)
+[log] early stopping at iteration 8
+clipimage succImages: 45  totalImages: 47
+attacking image index : 49
+chose pseudorandom target class: 8
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.3485 lr 1.00E-02 eps 0.031 (time 2.5208)
+[log] early stopping at iteration 1
+clipimage succImages: 46  totalImages: 48
+attacking image index : 50
+chose pseudorandom target class: 0
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -2.3327 lr 1.00E-02 eps 0.031 (time 2.5804)
+Step 00010: loss -8.2434 lr 1.00E-02 eps 0.031 (time 0.1501)
+[log] early stopping at iteration 11
+clipimage succImages: 47  totalImages: 49
+attacking image index : 51
+chose pseudorandom target class: 9
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -6.9953 lr 1.00E-02 eps 0.031 (time 2.4699)
+[log] early stopping at iteration 7
+clipimage succImages: 48  totalImages: 50
+attacking image index : 52
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -10.4910 lr 1.00E-02 eps 0.031 (time 2.4464)
+[log] early stopping at iteration 5
+clipimage succImages: 49  totalImages: 51
+attacking image index : 53
+chose pseudorandom target class: 9
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -5.3990 lr 1.00E-02 eps 0.031 (time 2.7044)
+[log] early stopping at iteration 3
+clipimage succImages: 50  totalImages: 52
+attacking image index : 54
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -1.3127 lr 1.00E-02 eps 0.031 (time 2.7461)
+[log] early stopping at iteration 3
+clipimage succImages: 51  totalImages: 53
+attacking image index : 55
+chose pseudorandom target class: 7
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -8.3349 lr 1.00E-02 eps 0.031 (time 2.6874)
+[log] early stopping at iteration 8
+clipimage succImages: 52  totalImages: 54
+attacking image index : 56
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -2.3164 lr 1.00E-02 eps 0.031 (time 2.7659)
+[log] early stopping at iteration 3
+clipimage succImages: 53  totalImages: 55
+attacking image index : 57
+chose pseudorandom target class: 6
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -5.2740 lr 1.00E-02 eps 0.031 (time 2.7989)
+[log] early stopping at iteration 5
+clipimage succImages: 54  totalImages: 56
+attacking image index : 58
+chose pseudorandom target class: 3
+Called
+restored
+skip the wrong example  58
+clipimage succImages: 54  totalImages: 56
+attacking image index : 59
+chose pseudorandom target class: 1
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.3667 lr 1.00E-02 eps 0.031 (time 3.0286)
+[log] early stopping at iteration 3
+clipimage succImages: 55  totalImages: 57
+attacking image index : 60
+chose pseudorandom target class: 1
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -2.9622 lr 1.00E-02 eps 0.031 (time 3.1432)
+[log] early stopping at iteration 5
+clipimage succImages: 56  totalImages: 58
+attacking image index : 61
+chose pseudorandom target class: 2
+Called
+restored
+skip the wrong example  61
+clipimage succImages: 56  totalImages: 58
+attacking image index : 62
+chose pseudorandom target class: 2
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.4099 lr 1.00E-02 eps 0.031 (time 3.1720)
+[log] early stopping at iteration 4
+clipimage succImages: 57  totalImages: 59
+attacking image index : 63
+chose pseudorandom target class: 4
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -4.3050 lr 1.00E-02 eps 0.031 (time 3.1149)
+[log] early stopping at iteration 7
+clipimage succImages: 58  totalImages: 60
+attacking image index : 64
+chose pseudorandom target class: 4
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0647 lr 1.00E-02 eps 0.031 (time 2.9256)
+[log] early stopping at iteration 10
+clipimage succImages: 59  totalImages: 61
+attacking image index : 65
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.7633 lr 1.00E-02 eps 0.031 (time 3.1440)
+[log] early stopping at iteration 7
+clipimage succImages: 60  totalImages: 62
+attacking image index : 66
+chose pseudorandom target class: 4
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -7.4984 lr 1.00E-02 eps 0.031 (time 3.2578)
+[log] early stopping at iteration 3
+clipimage succImages: 61  totalImages: 63
+attacking image index : 67
+chose pseudorandom target class: 3
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.2319 lr 1.00E-02 eps 0.031 (time 3.2415)
+[log] early stopping at iteration 6
+clipimage succImages: 62  totalImages: 64
+attacking image index : 68
+chose pseudorandom target class: 2
+Called
+restored
+skip the wrong example  68
+clipimage succImages: 62  totalImages: 64
+attacking image index : 69
+chose pseudorandom target class: 6
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -3.8535 lr 1.00E-02 eps 0.031 (time 3.4673)
+[log] early stopping at iteration 6
+clipimage succImages: 63  totalImages: 65
+attacking image index : 70
+chose pseudorandom target class: 6
+Called
+restored
+skip the wrong example  70
+clipimage succImages: 63  totalImages: 65
+attacking image index : 71
+chose pseudorandom target class: 7
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0108 lr 1.00E-02 eps 0.031 (time 3.4782)
+Step 00010: loss -0.1513 lr 1.00E-02 eps 0.031 (time 0.2255)
+[log] early stopping at iteration 12
+clipimage succImages: 64  totalImages: 66
+attacking image index : 72
+chose pseudorandom target class: 3
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -4.7753 lr 1.00E-02 eps 0.031 (time 3.4818)
+Step 00010: loss -11.2432 lr 1.00E-02 eps 0.031 (time 0.1450)
+[log] early stopping at iteration 11
+clipimage succImages: 65  totalImages: 67
+attacking image index : 73
+chose pseudorandom target class: 6
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -3.1890 lr 1.00E-02 eps 0.031 (time 3.4715)
+Step 00010: loss -7.5330 lr 1.00E-02 eps 0.031 (time 0.1711)
+[log] Annealing max_lr
+Step 00020: loss -8.0936 lr 5.00E-03 eps 0.031 (time 0.1404)
+[log] early stopping at iteration 21
+clipimage succImages: 66  totalImages: 68
+attacking image index : 74
+chose pseudorandom target class: 9
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -10.2429 lr 1.00E-02 eps 0.031 (time 3.5340)
+[log] early stopping at iteration 4
+clipimage succImages: 67  totalImages: 69
+attacking image index : 75
+chose pseudorandom target class: 8
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.1312 lr 1.00E-02 eps 0.031 (time 3.6953)
+Step 00010: loss -2.4051 lr 1.00E-02 eps 0.031 (time 0.1304)
+[log] early stopping at iteration 11
+clipimage succImages: 68  totalImages: 70
+attacking image index : 76
+chose pseudorandom target class: 1
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -3.9751 lr 1.00E-02 eps 0.031 (time 3.5208)
+[log] early stopping at iteration 5
+clipimage succImages: 69  totalImages: 71
+attacking image index : 77
+chose pseudorandom target class: 7
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -2.3401 lr 1.00E-02 eps 0.031 (time 3.7010)
+Step 00010: loss -7.6031 lr 1.00E-02 eps 0.031 (time 0.1113)
+[log] early stopping at iteration 12
+clipimage succImages: 70  totalImages: 72
+attacking image index : 78
+chose pseudorandom target class: 5
+Called
+restored
+skip the wrong example  78
+clipimage succImages: 70  totalImages: 72
+attacking image index : 79
+chose pseudorandom target class: 7
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0814 lr 1.00E-02 eps 0.031 (time 3.7471)
+[log] early stopping at iteration 5
+clipimage succImages: 71  totalImages: 73
+attacking image index : 80
+chose pseudorandom target class: 6
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -2.5561 lr 1.00E-02 eps 0.031 (time 3.7777)
+Step 00010: loss -6.2596 lr 1.00E-02 eps 0.031 (time 0.1261)
+[log] Annealing max_lr
+Step 00020: loss -7.3649 lr 5.00E-03 eps 0.031 (time 0.1499)
+Step 00030: loss -7.9829 lr 5.00E-03 eps 0.031 (time 0.1087)
+[log] Annealing max_lr
+Step 00040: loss -8.2642 lr 2.50E-03 eps 0.031 (time 0.0962)
+Step 00050: loss -8.8059 lr 2.50E-03 eps 0.031 (time 0.2072)
+[log] Annealing max_lr
+Step 00060: loss -9.2217 lr 1.25E-03 eps 0.031 (time 0.1366)
+[log] Annealing max_lr
+[log] early stopping at iteration 69
+clipimage succImages: 72  totalImages: 74
+attacking image index : 81
+chose pseudorandom target class: 3
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0432 lr 1.00E-02 eps 0.031 (time 4.0476)
+Step 00010: loss -1.5617 lr 1.00E-02 eps 0.031 (time 0.1002)
+[log] early stopping at iteration 17
+clipimage succImages: 73  totalImages: 75
+attacking image index : 82
+chose pseudorandom target class: 3
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -2.1417 lr 1.00E-02 eps 0.031 (time 4.0707)
+Step 00010: loss -9.2556 lr 1.00E-02 eps 0.031 (time 0.2084)
+Step 00020: loss -11.1604 lr 1.00E-02 eps 0.031 (time 0.1402)
+[log] Annealing max_lr
+Step 00030: loss -12.3125 lr 5.00E-03 eps 0.031 (time 0.0978)
+[log] early stopping at iteration 34
+clipimage succImages: 74  totalImages: 76
+attacking image index : 83
+chose pseudorandom target class: 2
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -10.1401 lr 1.00E-02 eps 0.031 (time 4.0748)
+[log] early stopping at iteration 5
+clipimage succImages: 75  totalImages: 77
+attacking image index : 84
+chose pseudorandom target class: 1
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -1.0775 lr 1.00E-02 eps 0.031 (time 4.2303)
+[log] early stopping at iteration 5
+clipimage succImages: 76  totalImages: 78
+attacking image index : 85
+chose pseudorandom target class: 0
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -6.9283 lr 1.00E-02 eps 0.031 (time 3.9052)
+[log] early stopping at iteration 3
+clipimage succImages: 77  totalImages: 79
+attacking image index : 86
+chose pseudorandom target class: 4
+Called
+restored
+skip the wrong example  86
+clipimage succImages: 77  totalImages: 79
+attacking image index : 87
+chose pseudorandom target class: 6
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -9.2170 lr 1.00E-02 eps 0.031 (time 4.4898)
+[log] early stopping at iteration 7
+clipimage succImages: 78  totalImages: 80
+attacking image index : 88
+chose pseudorandom target class: 0
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.4561 lr 1.00E-02 eps 0.031 (time 4.2108)
+Step 00010: loss -4.3702 lr 1.00E-02 eps 0.031 (time 0.1046)
+[log] Annealing max_lr
+Step 00020: loss -5.8610 lr 5.00E-03 eps 0.031 (time 0.1809)
+Step 00030: loss -7.3587 lr 5.00E-03 eps 0.031 (time 0.1920)
+[log] early stopping at iteration 40
+clipimage succImages: 79  totalImages: 81
+attacking image index : 89
+chose pseudorandom target class: 3
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.6285 lr 1.00E-02 eps 0.031 (time 4.0581)
+Step 00010: loss -6.3237 lr 1.00E-02 eps 0.031 (time 0.1879)
+Step 00020: loss -8.3494 lr 1.00E-02 eps 0.031 (time 0.1646)
+[log] Annealing max_lr
+[log] early stopping at iteration 30
+clipimage succImages: 80  totalImages: 82
+attacking image index : 90
+chose pseudorandom target class: 2
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -1.4506 lr 1.00E-02 eps 0.031 (time 4.5922)
+[log] early stopping at iteration 10
+clipimage succImages: 81  totalImages: 83
+attacking image index : 91
+chose pseudorandom target class: 2
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -6.1894 lr 1.00E-02 eps 0.031 (time 4.2188)
+[log] early stopping at iteration 3
+clipimage succImages: 82  totalImages: 84
+attacking image index : 92
+chose pseudorandom target class: 3
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.9310 lr 1.00E-02 eps 0.031 (time 4.4022)
+[log] early stopping at iteration 7
+clipimage succImages: 83  totalImages: 85
+attacking image index : 93
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0233 lr 1.00E-02 eps 0.031 (time 4.1785)
+Step 00010: loss -0.4442 lr 1.00E-02 eps 0.031 (time 0.2112)
+[log] early stopping at iteration 16
+clipimage succImages: 84  totalImages: 86
+attacking image index : 94
+chose pseudorandom target class: 2
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -1.0493 lr 1.00E-02 eps 0.031 (time 4.7189)
+Step 00010: loss -4.1865 lr 1.00E-02 eps 0.031 (time 0.1011)
+[log] early stopping at iteration 16
+clipimage succImages: 85  totalImages: 87
+attacking image index : 95
+chose pseudorandom target class: 9
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0552 lr 1.00E-02 eps 0.031 (time 4.5425)
+[log] early stopping at iteration 5
+clipimage succImages: 86  totalImages: 88
+attacking image index : 96
+chose pseudorandom target class: 4
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.3384 lr 1.00E-02 eps 0.031 (time 4.5951)
+[log] early stopping at iteration 3
+clipimage succImages: 87  totalImages: 89
+attacking image index : 97
+chose pseudorandom target class: 3
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -8.1890 lr 1.00E-02 eps 0.031 (time 4.6312)
+Step 00010: loss -9.8154 lr 1.00E-02 eps 0.031 (time 0.1903)
+[log] Annealing max_lr
+Step 00020: loss -10.2741 lr 5.00E-03 eps 0.031 (time 0.1012)
+[log] Annealing max_lr
+Step 00030: loss -10.9057 lr 2.50E-03 eps 0.031 (time 0.1052)
+[log] Annealing max_lr
+Step 00040: loss -11.0974 lr 1.25E-03 eps 0.031 (time 0.1814)
+[log] Annealing max_lr
+[log] Annealing max_lr
+Step 00050: loss -11.2247 lr 3.13E-04 eps 0.031 (time 0.1901)
+[log] Annealing max_lr
+[log] Annealing max_lr
+Step 00060: loss -11.1702 lr 7.81E-05 eps 0.031 (time 0.0967)
+[log] Annealing max_lr
+Step 00070: loss -11.2831 lr 5.00E-05 eps 0.031 (time 0.1158)
+Step 00080: loss -11.1817 lr 5.00E-05 eps 0.031 (time 0.1792)
+Step 00090: loss -11.3267 lr 5.00E-05 eps 0.031 (time 0.1312)
+Step 00100: loss -11.2462 lr 5.00E-05 eps 0.031 (time 0.1213)
+Step 00110: loss -11.3178 lr 5.00E-05 eps 0.031 (time 0.1762)
+Step 00120: loss -11.4295 lr 5.00E-05 eps 0.031 (time 0.1558)
+Step 00130: loss -11.3748 lr 5.00E-05 eps 0.031 (time 0.0930)
+Step 00140: loss -11.4131 lr 5.00E-05 eps 0.031 (time 0.1848)
+Step 00150: loss -11.4561 lr 5.00E-05 eps 0.031 (time 0.1735)
+Step 00160: loss -11.4891 lr 5.00E-05 eps 0.031 (time 0.0980)
+Step 00170: loss -11.4299 lr 5.00E-05 eps 0.031 (time 0.1114)
+Step 00180: loss -11.6646 lr 5.00E-05 eps 0.031 (time 0.1699)
+Step 00190: loss -11.5056 lr 5.00E-05 eps 0.031 (time 0.1463)
+Step 00200: loss -11.4942 lr 5.00E-05 eps 0.031 (time 0.1022)
+Step 00210: loss -11.3422 lr 5.00E-05 eps 0.031 (time 0.1371)
+Step 00220: loss -11.5959 lr 5.00E-05 eps 0.031 (time 0.2139)
+Step 00230: loss -11.4402 lr 5.00E-05 eps 0.031 (time 0.1441)
+Step 00240: loss -11.6487 lr 5.00E-05 eps 0.031 (time 0.1068)
+Step 00250: loss -11.6321 lr 5.00E-05 eps 0.031 (time 0.1163)
+Step 00260: loss -11.6947 lr 5.00E-05 eps 0.031 (time 0.1333)
+Step 00270: loss -11.5513 lr 5.00E-05 eps 0.031 (time 0.0960)
+Step 00280: loss -11.4992 lr 5.00E-05 eps 0.031 (time 0.1954)
+Step 00290: loss -11.7359 lr 5.00E-05 eps 0.031 (time 0.1145)
+Step 00300: loss -11.6579 lr 5.00E-05 eps 0.031 (time 0.1269)
+Step 00310: loss -11.7601 lr 5.00E-05 eps 0.031 (time 0.1185)
+Step 00320: loss -11.6315 lr 5.00E-05 eps 0.031 (time 0.1387)
+Step 00330: loss -11.7945 lr 5.00E-05 eps 0.031 (time 0.1487)
+Step 00340: loss -11.8369 lr 5.00E-05 eps 0.031 (time 0.2006)
+Step 00350: loss -11.8056 lr 5.00E-05 eps 0.031 (time 0.1633)
+[log] early stopping at iteration 353
+clipimage succImages: 88  totalImages: 90
+attacking image index : 98
+chose pseudorandom target class: 4
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0000 lr 1.00E-02 eps 0.031 (time 4.8208)
+Step 00010: loss -0.0062 lr 1.00E-02 eps 0.031 (time 0.1439)
+[log] Annealing max_lr
+[log] Annealing max_lr
+Step 00020: loss -0.0210 lr 2.50E-03 eps 0.031 (time 0.0930)
+[log] Annealing max_lr
+Step 00030: loss -0.0640 lr 1.25E-03 eps 0.031 (time 0.1026)
+[log] Annealing max_lr
+Step 00040: loss -0.0974 lr 6.25E-04 eps 0.031 (time 0.1209)
+[log] Annealing max_lr
+[log] Annealing max_lr
+Step 00050: loss -0.0896 lr 1.56E-04 eps 0.031 (time 0.0928)
+[log] Annealing max_lr
+[log] Annealing max_lr
+Step 00060: loss -0.1041 lr 5.00E-05 eps 0.031 (time 0.1136)
+Step 00070: loss -0.1163 lr 5.00E-05 eps 0.031 (time 0.1473)
+Step 00080: loss -0.1065 lr 5.00E-05 eps 0.031 (time 0.2074)
+Step 00090: loss -0.0931 lr 5.00E-05 eps 0.031 (time 0.0921)
+Step 00100: loss -0.1067 lr 5.00E-05 eps 0.031 (time 0.1137)
+Step 00110: loss -0.0855 lr 5.00E-05 eps 0.031 (time 0.1154)
+Step 00120: loss -0.1186 lr 5.00E-05 eps 0.031 (time 0.1682)
+Step 00130: loss -0.1048 lr 5.00E-05 eps 0.031 (time 0.1031)
+Step 00140: loss -0.0998 lr 5.00E-05 eps 0.031 (time 0.1243)
+Step 00150: loss -0.1296 lr 5.00E-05 eps 0.031 (time 0.1514)
+Step 00160: loss -0.1165 lr 5.00E-05 eps 0.031 (time 0.1563)
+Step 00170: loss -0.1606 lr 5.00E-05 eps 0.031 (time 0.0929)
+Step 00180: loss -0.1112 lr 5.00E-05 eps 0.031 (time 0.1680)
+Step 00190: loss -0.1263 lr 5.00E-05 eps 0.031 (time 0.2006)
+Step 00200: loss -0.1505 lr 5.00E-05 eps 0.031 (time 0.1634)
+Step 00210: loss -0.1621 lr 5.00E-05 eps 0.031 (time 0.1101)
+Step 00220: loss -0.1411 lr 5.00E-05 eps 0.031 (time 0.2161)
+Step 00230: loss -0.1464 lr 5.00E-05 eps 0.031 (time 0.1311)
+Step 00240: loss -0.1571 lr 5.00E-05 eps 0.031 (time 0.1179)
+Step 00250: loss -0.1415 lr 5.00E-05 eps 0.031 (time 0.1817)
+Step 00260: loss -0.1598 lr 5.00E-05 eps 0.031 (time 0.1260)
+Step 00270: loss -0.1696 lr 5.00E-05 eps 0.031 (time 0.1416)
+Step 00280: loss -0.1315 lr 5.00E-05 eps 0.031 (time 0.1130)
+Step 00290: loss -0.1559 lr 5.00E-05 eps 0.031 (time 0.1829)
+Step 00300: loss -0.1807 lr 5.00E-05 eps 0.031 (time 0.1990)
+Step 00310: loss -0.1819 lr 5.00E-05 eps 0.031 (time 0.0969)
+Step 00320: loss -0.1582 lr 5.00E-05 eps 0.031 (time 0.1970)
+Step 00330: loss -0.1728 lr 5.00E-05 eps 0.031 (time 0.1802)
+Step 00340: loss -0.1670 lr 5.00E-05 eps 0.031 (time 0.1071)
+Step 00350: loss -0.2019 lr 5.00E-05 eps 0.031 (time 0.1704)
+Step 00360: loss -0.1725 lr 5.00E-05 eps 0.031 (time 0.1271)
+Step 00370: loss -0.1992 lr 5.00E-05 eps 0.031 (time 0.1213)
+Step 00380: loss -0.2148 lr 5.00E-05 eps 0.031 (time 0.1181)
+Step 00390: loss -0.2203 lr 5.00E-05 eps 0.031 (time 0.1434)
+Step 00400: loss -0.2244 lr 5.00E-05 eps 0.031 (time 0.2081)
+Step 00410: loss -0.1920 lr 5.00E-05 eps 0.031 (time 0.1240)
+Step 00420: loss -0.2042 lr 5.00E-05 eps 0.031 (time 0.1709)
+Step 00430: loss -0.2028 lr 5.00E-05 eps 0.031 (time 0.1393)
+Step 00440: loss -0.2041 lr 5.00E-05 eps 0.031 (time 0.1212)
+Step 00450: loss -0.1913 lr 5.00E-05 eps 0.031 (time 0.1049)
+Step 00460: loss -0.1983 lr 5.00E-05 eps 0.031 (time 0.1480)
+Step 00470: loss -0.2379 lr 5.00E-05 eps 0.031 (time 0.1449)
+Step 00480: loss -0.2343 lr 5.00E-05 eps 0.031 (time 0.1056)
+Step 00490: loss -0.2392 lr 5.00E-05 eps 0.031 (time 0.1257)
+Step 00500: loss -0.2354 lr 5.00E-05 eps 0.031 (time 0.2192)
+Step 00510: loss -0.2426 lr 5.00E-05 eps 0.031 (time 0.1051)
+Step 00520: loss -0.2547 lr 5.00E-05 eps 0.031 (time 0.1964)
+Step 00530: loss -0.2396 lr 5.00E-05 eps 0.031 (time 0.1727)
+Step 00540: loss -0.2706 lr 5.00E-05 eps 0.031 (time 0.1506)
+Step 00550: loss -0.2741 lr 5.00E-05 eps 0.031 (time 0.1098)
+Step 00560: loss -0.2548 lr 5.00E-05 eps 0.031 (time 0.1855)
+Step 00570: loss -0.2648 lr 5.00E-05 eps 0.031 (time 0.1731)
+Step 00580: loss -0.2974 lr 5.00E-05 eps 0.031 (time 0.1021)
+Step 00590: loss -0.2908 lr 5.00E-05 eps 0.031 (time 0.1004)
+clipimage succImages: 88  totalImages: 91
+attacking image index : 99
+chose pseudorandom target class: 1
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -1.5783 lr 1.00E-02 eps 0.031 (time 4.8008)
+Step 00010: loss -7.9101 lr 1.00E-02 eps 0.031 (time 0.1188)
+Step 00020: loss -9.3848 lr 1.00E-02 eps 0.031 (time 0.1779)
+[log] early stopping at iteration 21
+clipimage succImages: 89  totalImages: 92
+attacking image index : 100
+chose pseudorandom target class: 8
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -3.4564 lr 1.00E-02 eps 0.031 (time 4.7438)
+[log] early stopping at iteration 7
+clipimage succImages: 90  totalImages: 93
+attacking image index : 101
+chose pseudorandom target class: 1
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -11.3605 lr 1.00E-02 eps 0.031 (time 4.8754)
+[log] early stopping at iteration 2
+clipimage succImages: 91  totalImages: 94
+attacking image index : 102
+chose pseudorandom target class: 0
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0490 lr 1.00E-02 eps 0.031 (time 4.9543)
+Step 00010: loss -1.8977 lr 1.00E-02 eps 0.031 (time 0.1544)
+[log] early stopping at iteration 12
+clipimage succImages: 92  totalImages: 95
+attacking image index : 103
+chose pseudorandom target class: 7
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -6.2257 lr 1.00E-02 eps 0.031 (time 4.9973)
+[log] early stopping at iteration 2
+clipimage succImages: 93  totalImages: 96
+attacking image index : 104
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -1.0682 lr 1.00E-02 eps 0.031 (time 5.0907)
+Step 00010: loss -8.0143 lr 1.00E-02 eps 0.031 (time 0.1290)
+[log] early stopping at iteration 12
+clipimage succImages: 94  totalImages: 97
+attacking image index : 105
+chose pseudorandom target class: 0
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0492 lr 1.00E-02 eps 0.031 (time 4.9665)
+Step 00010: loss -1.7350 lr 1.00E-02 eps 0.031 (time 0.1424)
+Step 00020: loss -3.1127 lr 1.00E-02 eps 0.031 (time 0.0963)
+[log] Annealing max_lr
+Step 00030: loss -3.6546 lr 5.00E-03 eps 0.031 (time 0.1914)
+Step 00040: loss -4.3377 lr 5.00E-03 eps 0.031 (time 0.1667)
+[log] Annealing max_lr
+Step 00050: loss -4.8736 lr 2.50E-03 eps 0.031 (time 0.1057)
+[log] Annealing max_lr
+Step 00060: loss -5.2423 lr 1.25E-03 eps 0.031 (time 0.1142)
+[log] Annealing max_lr
+Step 00070: loss -5.6056 lr 6.25E-04 eps 0.031 (time 0.1733)
+[log] Annealing max_lr
+Step 00080: loss -5.8357 lr 3.13E-04 eps 0.031 (time 0.1131)
+[log] Annealing max_lr
+[log] Annealing max_lr
+Step 00090: loss -5.8659 lr 7.81E-05 eps 0.031 (time 0.0990)
+[log] Annealing max_lr
+Step 00100: loss -6.1390 lr 5.00E-05 eps 0.031 (time 0.1020)
+Step 00110: loss -5.9903 lr 5.00E-05 eps 0.031 (time 0.1249)
+Step 00120: loss -6.0582 lr 5.00E-05 eps 0.031 (time 0.1028)
+Step 00130: loss -6.0927 lr 5.00E-05 eps 0.031 (time 0.1492)
+Step 00140: loss -6.1304 lr 5.00E-05 eps 0.031 (time 0.1738)
+Step 00150: loss -6.0357 lr 5.00E-05 eps 0.031 (time 0.1548)
+Step 00160: loss -6.1970 lr 5.00E-05 eps 0.031 (time 0.2107)
+Step 00170: loss -6.1725 lr 5.00E-05 eps 0.031 (time 0.1580)
+Step 00180: loss -6.1046 lr 5.00E-05 eps 0.031 (time 0.1106)
+Step 00190: loss -6.3086 lr 5.00E-05 eps 0.031 (time 0.1656)
+Step 00200: loss -6.1829 lr 5.00E-05 eps 0.031 (time 0.1715)
+Step 00210: loss -6.3387 lr 5.00E-05 eps 0.031 (time 0.1049)
+Step 00220: loss -6.2287 lr 5.00E-05 eps 0.031 (time 0.1792)
+Step 00230: loss -6.0954 lr 5.00E-05 eps 0.031 (time 0.1937)
+Step 00240: loss -6.2977 lr 5.00E-05 eps 0.031 (time 0.1024)
+Step 00250: loss -6.3015 lr 5.00E-05 eps 0.031 (time 0.0997)
+Step 00260: loss -6.2372 lr 5.00E-05 eps 0.031 (time 0.1956)
+Step 00270: loss -6.2173 lr 5.00E-05 eps 0.031 (time 0.1305)
+Step 00280: loss -6.4229 lr 5.00E-05 eps 0.031 (time 0.0875)
+Step 00290: loss -6.1889 lr 5.00E-05 eps 0.031 (time 0.1653)
+Step 00300: loss -6.2963 lr 5.00E-05 eps 0.031 (time 0.1704)
+Step 00310: loss -6.4425 lr 5.00E-05 eps 0.031 (time 0.1081)
+Step 00320: loss -6.2321 lr 5.00E-05 eps 0.031 (time 0.0943)
+Step 00330: loss -6.3448 lr 5.00E-05 eps 0.031 (time 0.1804)
+Step 00340: loss -6.3469 lr 5.00E-05 eps 0.031 (time 0.1850)
+Step 00350: loss -6.5206 lr 5.00E-05 eps 0.031 (time 0.0992)
+Step 00360: loss -6.3648 lr 5.00E-05 eps 0.031 (time 0.1197)
+Step 00370: loss -6.4891 lr 5.00E-05 eps 0.031 (time 0.1521)
+Step 00380: loss -6.2750 lr 5.00E-05 eps 0.031 (time 0.1551)
+Step 00390: loss -6.4794 lr 5.00E-05 eps 0.031 (time 0.1089)
+Step 00400: loss -6.5630 lr 5.00E-05 eps 0.031 (time 0.1192)
+Step 00410: loss -6.3566 lr 5.00E-05 eps 0.031 (time 0.1706)
+Step 00420: loss -6.4723 lr 5.00E-05 eps 0.031 (time 0.1779)
+Step 00430: loss -6.4033 lr 5.00E-05 eps 0.031 (time 0.1058)
+Step 00440: loss -6.5329 lr 5.00E-05 eps 0.031 (time 0.1186)
+Step 00450: loss -6.5464 lr 5.00E-05 eps 0.031 (time 0.1514)
+Step 00460: loss -6.5621 lr 5.00E-05 eps 0.031 (time 0.1354)
+Step 00470: loss -6.5179 lr 5.00E-05 eps 0.031 (time 0.1068)
+Step 00480: loss -6.6245 lr 5.00E-05 eps 0.031 (time 0.2162)
+Step 00490: loss -6.5362 lr 5.00E-05 eps 0.031 (time 0.1172)
+[log] early stopping at iteration 500
+clipimage succImages: 95  totalImages: 98
+attacking image index : 106
+chose pseudorandom target class: 7
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -5.9583 lr 1.00E-02 eps 0.031 (time 5.2344)
+[log] early stopping at iteration 2
+clipimage succImages: 96  totalImages: 99
+attacking image index : 107
+chose pseudorandom target class: 0
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0017 lr 1.00E-02 eps 0.031 (time 5.0361)
+Step 00010: loss -0.0158 lr 1.00E-02 eps 0.031 (time 0.1797)
+[log] Annealing max_lr
+Step 00020: loss -0.0388 lr 5.00E-03 eps 0.031 (time 0.1080)
+Step 00030: loss -0.0693 lr 5.00E-03 eps 0.031 (time 0.1157)
+Step 00040: loss -0.1130 lr 5.00E-03 eps 0.031 (time 0.1622)
+[log] Annealing max_lr
+[log] early stopping at iteration 49
+clipimage succImages: 97  totalImages: 100
+attacking image index : 108
+chose pseudorandom target class: 3
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -1.1376 lr 1.00E-02 eps 0.031 (time 5.2885)
+Step 00010: loss -5.4297 lr 1.00E-02 eps 0.031 (time 0.1342)
+Step 00020: loss -6.7684 lr 1.00E-02 eps 0.031 (time 0.1045)
+[log] Annealing max_lr
+Step 00030: loss -7.5002 lr 5.00E-03 eps 0.031 (time 0.2692)
+Step 00040: loss -8.5059 lr 5.00E-03 eps 0.031 (time 0.1558)
+Step 00050: loss -9.1833 lr 5.00E-03 eps 0.031 (time 0.0984)
+[log] Annealing max_lr
+Step 00060: loss -9.9021 lr 2.50E-03 eps 0.031 (time 0.1886)
+Step 00070: loss -10.6421 lr 2.50E-03 eps 0.031 (time 0.2369)
+[log] early stopping at iteration 76
+clipimage succImages: 98  totalImages: 101
+attacking image index : 109
+chose pseudorandom target class: 6
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -1.3197 lr 1.00E-02 eps 0.031 (time 5.3196)
+Step 00010: loss -6.7161 lr 1.00E-02 eps 0.031 (time 0.1221)
+[log] Annealing max_lr
+Step 00020: loss -7.6781 lr 5.00E-03 eps 0.031 (time 0.1057)
+[log] early stopping at iteration 27
+clipimage succImages: 99  totalImages: 102
+attacking image index : 110
+chose pseudorandom target class: 0
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -3.8567 lr 1.00E-02 eps 0.031 (time 5.4127)
+Step 00010: loss -10.5806 lr 1.00E-02 eps 0.031 (time 0.0976)
+[log] Annealing max_lr
+Step 00020: loss -11.9896 lr 5.00E-03 eps 0.031 (time 0.1069)
+[log] early stopping at iteration 23
+clipimage succImages: 100  totalImages: 103
+attacking image index : 111
+chose pseudorandom target class: 4
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -2.2709 lr 1.00E-02 eps 0.031 (time 5.2807)
+Step 00010: loss -7.0320 lr 1.00E-02 eps 0.031 (time 0.1163)
+Step 00020: loss -8.3816 lr 1.00E-02 eps 0.031 (time 0.1426)
+[log] Annealing max_lr
+Step 00030: loss -9.1284 lr 5.00E-03 eps 0.031 (time 0.1020)
+[log] early stopping at iteration 40
+clipimage succImages: 101  totalImages: 104
+attacking image index : 112
+chose pseudorandom target class: 4
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.1877 lr 1.00E-02 eps 0.031 (time 5.4978)
+[log] early stopping at iteration 6
+clipimage succImages: 102  totalImages: 105
+attacking image index : 113
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -2.6112 lr 1.00E-02 eps 0.031 (time 5.2566)
+[log] early stopping at iteration 7
+clipimage succImages: 103  totalImages: 106
+attacking image index : 114
+chose pseudorandom target class: 3
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -1.7514 lr 1.00E-02 eps 0.031 (time 5.6142)
+[log] early stopping at iteration 3
+clipimage succImages: 104  totalImages: 107
+attacking image index : 115
+chose pseudorandom target class: 2
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -6.9027 lr 1.00E-02 eps 0.031 (time 5.2674)
+[log] early stopping at iteration 7
+clipimage succImages: 105  totalImages: 108
+attacking image index : 116
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -3.6530 lr 1.00E-02 eps 0.031 (time 5.8116)
+Step 00010: loss -7.9422 lr 1.00E-02 eps 0.031 (time 0.1054)
+Step 00020: loss -8.7869 lr 1.00E-02 eps 0.031 (time 0.1533)
+[log] early stopping at iteration 24
+clipimage succImages: 106  totalImages: 109
+attacking image index : 117
+chose pseudorandom target class: 0
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0855 lr 1.00E-02 eps 0.031 (time 5.5554)
+Step 00010: loss -2.2405 lr 1.00E-02 eps 0.031 (time 0.1623)
+[log] early stopping at iteration 11
+clipimage succImages: 107  totalImages: 110
+attacking image index : 118
+chose pseudorandom target class: 0
+Called
+restored
+skip the wrong example  118
+clipimage succImages: 107  totalImages: 110
+attacking image index : 119
+chose pseudorandom target class: 2
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -1.0924 lr 1.00E-02 eps 0.031 (time 5.4763)
+[log] early stopping at iteration 7
+clipimage succImages: 108  totalImages: 111
+attacking image index : 120
+chose pseudorandom target class: 7
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -8.7894 lr 1.00E-02 eps 0.031 (time 5.7003)
+[log] early stopping at iteration 8
+clipimage succImages: 109  totalImages: 112
+attacking image index : 121
+chose pseudorandom target class: 2
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -3.9850 lr 1.00E-02 eps 0.031 (time 5.5938)
+[log] early stopping at iteration 10
+clipimage succImages: 110  totalImages: 113
+attacking image index : 122
+chose pseudorandom target class: 6
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -2.9595 lr 1.00E-02 eps 0.031 (time 6.1223)
+[log] early stopping at iteration 7
+clipimage succImages: 111  totalImages: 114
+attacking image index : 123
+chose pseudorandom target class: 6
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.6256 lr 1.00E-02 eps 0.031 (time 5.8420)
+Step 00010: loss -3.4298 lr 1.00E-02 eps 0.031 (time 0.1898)
+Step 00020: loss -3.9864 lr 1.00E-02 eps 0.031 (time 0.1638)
+[log] Annealing max_lr
+Step 00030: loss -4.5950 lr 5.00E-03 eps 0.031 (time 0.1084)
+[log] early stopping at iteration 36
+clipimage succImages: 112  totalImages: 115
+attacking image index : 124
+chose pseudorandom target class: 1
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -3.2328 lr 1.00E-02 eps 0.031 (time 5.8792)
+[log] early stopping at iteration 7
+clipimage succImages: 113  totalImages: 116
+attacking image index : 125
+chose pseudorandom target class: 2
+Called
+restored
+skip the wrong example  125
+clipimage succImages: 113  totalImages: 116
+attacking image index : 126
+chose pseudorandom target class: 6
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -6.9283 lr 1.00E-02 eps 0.031 (time 5.8742)
+[log] early stopping at iteration 4
+clipimage succImages: 114  totalImages: 117
+attacking image index : 127
+chose pseudorandom target class: 9
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -3.3675 lr 1.00E-02 eps 0.031 (time 6.2275)
+[log] early stopping at iteration 4
+clipimage succImages: 115  totalImages: 118
+attacking image index : 128
+chose pseudorandom target class: 2
+Called
+restored
+skip the wrong example  128
+clipimage succImages: 115  totalImages: 118
+attacking image index : 129
+chose pseudorandom target class: 7
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.3267 lr 1.00E-02 eps 0.031 (time 6.1626)
+Step 00010: loss -3.3039 lr 1.00E-02 eps 0.031 (time 0.1935)
+[log] early stopping at iteration 12
+clipimage succImages: 116  totalImages: 119
+attacking image index : 130
+chose pseudorandom target class: 9
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -2.6386 lr 1.00E-02 eps 0.031 (time 6.1010)
+[log] early stopping at iteration 5
+clipimage succImages: 117  totalImages: 120
+attacking image index : 131
+chose pseudorandom target class: 3
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -2.5061 lr 1.00E-02 eps 0.031 (time 6.1395)
+[log] early stopping at iteration 5
+clipimage succImages: 118  totalImages: 121
+attacking image index : 132
+chose pseudorandom target class: 1
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.4186 lr 1.00E-02 eps 0.031 (time 6.3415)
+Step 00010: loss -5.6798 lr 1.00E-02 eps 0.031 (time 0.1949)
+[log] Annealing max_lr
+Step 00020: loss -7.1980 lr 5.00E-03 eps 0.031 (time 0.1123)
+[log] early stopping at iteration 24
+clipimage succImages: 119  totalImages: 122
+attacking image index : 133
+chose pseudorandom target class: 1
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0000 lr 1.00E-02 eps 0.031 (time 6.3968)
+Step 00010: loss -0.0000 lr 1.00E-02 eps 0.031 (time 0.0974)
+[log] Annealing max_lr
+[log] Annealing max_lr
+Step 00020: loss -0.0000 lr 2.50E-03 eps 0.031 (time 0.2670)
+[log] Annealing max_lr
+Step 00030: loss -0.0001 lr 1.25E-03 eps 0.031 (time 0.1779)
+[log] Annealing max_lr
+Step 00040: loss -0.0001 lr 6.25E-04 eps 0.031 (time 0.1033)
+[log] Annealing max_lr
+[log] Annealing max_lr
+Step 00050: loss -0.0001 lr 1.56E-04 eps 0.031 (time 0.1687)
+[log] Annealing max_lr
+[log] Annealing max_lr
+Step 00060: loss -0.0002 lr 5.00E-05 eps 0.031 (time 0.1078)
+Step 00070: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.1009)
+Step 00080: loss -0.0002 lr 5.00E-05 eps 0.031 (time 0.1644)
+Step 00090: loss -0.0002 lr 5.00E-05 eps 0.031 (time 0.1540)
+Step 00100: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.0925)
+Step 00110: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.1908)
+Step 00120: loss -0.0003 lr 5.00E-05 eps 0.031 (time 0.1990)
+Step 00130: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.0997)
+Step 00140: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.1176)
+Step 00150: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.1994)
+Step 00160: loss -0.0002 lr 5.00E-05 eps 0.031 (time 0.1476)
+Step 00170: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.1064)
+Step 00180: loss -0.0002 lr 5.00E-05 eps 0.031 (time 0.1807)
+Step 00190: loss -0.0003 lr 5.00E-05 eps 0.031 (time 0.1798)
+Step 00200: loss -0.0002 lr 5.00E-05 eps 0.031 (time 0.1117)
+Step 00210: loss -0.0002 lr 5.00E-05 eps 0.031 (time 0.1768)
+Step 00220: loss -0.0003 lr 5.00E-05 eps 0.031 (time 0.1576)
+Step 00230: loss -0.0003 lr 5.00E-05 eps 0.031 (time 0.1026)
+Step 00240: loss -0.0002 lr 5.00E-05 eps 0.031 (time 0.2098)
+Step 00250: loss -0.0002 lr 5.00E-05 eps 0.031 (time 0.1516)
+Step 00260: loss -0.0002 lr 5.00E-05 eps 0.031 (time 0.1035)
+Step 00270: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.1197)
+Step 00280: loss -0.0002 lr 5.00E-05 eps 0.031 (time 0.1413)
+Step 00290: loss -0.0002 lr 5.00E-05 eps 0.031 (time 0.1079)
+Step 00300: loss -0.0002 lr 5.00E-05 eps 0.031 (time 0.1110)
+Step 00310: loss -0.0002 lr 5.00E-05 eps 0.031 (time 0.1378)
+Step 00320: loss -0.0003 lr 5.00E-05 eps 0.031 (time 0.1202)
+Step 00330: loss -0.0002 lr 5.00E-05 eps 0.031 (time 0.1931)
+Step 00340: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.1224)
+Step 00350: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.1049)
+Step 00360: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.0977)
+Step 00370: loss -0.0002 lr 5.00E-05 eps 0.031 (time 0.1617)
+Step 00380: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.1006)
+Step 00390: loss -0.0002 lr 5.00E-05 eps 0.031 (time 0.1100)
+Step 00400: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.1839)
+Step 00410: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.1356)
+Step 00420: loss -0.0002 lr 5.00E-05 eps 0.031 (time 0.0952)
+Step 00430: loss -0.0003 lr 5.00E-05 eps 0.031 (time 0.1108)
+Step 00440: loss -0.0003 lr 5.00E-05 eps 0.031 (time 0.2045)
+Step 00450: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.1449)
+Step 00460: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.1067)
+Step 00470: loss -0.0003 lr 5.00E-05 eps 0.031 (time 0.1781)
+Step 00480: loss -0.0007 lr 5.00E-05 eps 0.031 (time 0.1266)
+Step 00490: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.0982)
+Step 00500: loss -0.0003 lr 5.00E-05 eps 0.031 (time 0.1957)
+Step 00510: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.1608)
+Step 00520: loss -0.0007 lr 5.00E-05 eps 0.031 (time 0.1056)
+Step 00530: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.2143)
+Step 00540: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.1616)
+Step 00550: loss -0.0007 lr 5.00E-05 eps 0.031 (time 0.0978)
+Step 00560: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.1035)
+Step 00570: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.1473)
+Step 00580: loss -0.0003 lr 5.00E-05 eps 0.031 (time 0.1450)
+Step 00590: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.0968)
+clipimage succImages: 119  totalImages: 123
+attacking image index : 134
+chose pseudorandom target class: 3
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -10.0586 lr 1.00E-02 eps 0.031 (time 6.2922)
+[log] early stopping at iteration 2
+clipimage succImages: 120  totalImages: 124
+attacking image index : 135
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.9042 lr 1.00E-02 eps 0.031 (time 6.2110)
+Step 00010: loss -2.6563 lr 1.00E-02 eps 0.031 (time 0.1815)
+Step 00020: loss -3.8014 lr 1.00E-02 eps 0.031 (time 0.2154)
+[log] early stopping at iteration 26
+clipimage succImages: 121  totalImages: 125
+attacking image index : 136
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0495 lr 1.00E-02 eps 0.031 (time 6.6475)
+Step 00010: loss -1.3488 lr 1.00E-02 eps 0.031 (time 0.1568)
+[log] early stopping at iteration 18
+clipimage succImages: 122  totalImages: 126
+attacking image index : 137
+chose pseudorandom target class: 6
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.2391 lr 1.00E-02 eps 0.031 (time 6.5278)
+[log] early stopping at iteration 7
+clipimage succImages: 123  totalImages: 127
+attacking image index : 138
+chose pseudorandom target class: 9
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -1.2669 lr 1.00E-02 eps 0.031 (time 6.5772)
+[log] early stopping at iteration 3
+clipimage succImages: 124  totalImages: 128
+attacking image index : 139
+chose pseudorandom target class: 4
+Called
+restored
+skip the wrong example  139
+clipimage succImages: 124  totalImages: 128
+attacking image index : 140
+chose pseudorandom target class: 8
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.1917 lr 1.00E-02 eps 0.031 (time 6.3782)
+[log] early stopping at iteration 3
+clipimage succImages: 125  totalImages: 129
+attacking image index : 141
+chose pseudorandom target class: 6
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -1.8787 lr 1.00E-02 eps 0.031 (time 6.8240)
+[log] early stopping at iteration 6
+clipimage succImages: 126  totalImages: 130
+attacking image index : 142
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0031 lr 1.00E-02 eps 0.031 (time 6.8519)
+Step 00010: loss -0.0435 lr 1.00E-02 eps 0.031 (time 0.1011)
+[log] early stopping at iteration 11
+clipimage succImages: 127  totalImages: 131
+attacking image index : 143
+chose pseudorandom target class: 9
+Called
+restored
+skip the wrong example  143
+clipimage succImages: 127  totalImages: 131
+attacking image index : 144
+chose pseudorandom target class: 7
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -2.0290 lr 1.00E-02 eps 0.031 (time 7.1255)
+Step 00010: loss -6.8261 lr 1.00E-02 eps 0.031 (time 0.1147)
+[log] Annealing max_lr
+Step 00020: loss -7.3375 lr 5.00E-03 eps 0.031 (time 0.1214)
+Step 00030: loss -8.1495 lr 5.00E-03 eps 0.031 (time 0.1941)
+[log] early stopping at iteration 33
+clipimage succImages: 128  totalImages: 132
+attacking image index : 145
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -9.9354 lr 1.00E-02 eps 0.031 (time 6.9098)
+[log] early stopping at iteration 1
+clipimage succImages: 129  totalImages: 133
+attacking image index : 146
+chose pseudorandom target class: 2
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0888 lr 1.00E-02 eps 0.031 (time 6.8929)
+[log] early stopping at iteration 10
+clipimage succImages: 130  totalImages: 134
+attacking image index : 147
+chose pseudorandom target class: 6
+Called
+restored
+skip the wrong example  147
+clipimage succImages: 130  totalImages: 134
+attacking image index : 148
+chose pseudorandom target class: 3
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -7.5722 lr 1.00E-02 eps 0.031 (time 7.1420)
+[log] early stopping at iteration 2
+clipimage succImages: 131  totalImages: 135
+attacking image index : 149
+chose pseudorandom target class: 1
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.3096 lr 1.00E-02 eps 0.031 (time 7.1278)
+[log] early stopping at iteration 7
+clipimage succImages: 132  totalImages: 136
+attacking image index : 150
+chose pseudorandom target class: 4
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.7101 lr 1.00E-02 eps 0.031 (time 7.1187)
+[log] early stopping at iteration 5
+clipimage succImages: 133  totalImages: 137
+attacking image index : 151
+chose pseudorandom target class: 8
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -5.4335 lr 1.00E-02 eps 0.031 (time 7.0348)
+[log] early stopping at iteration 3
+clipimage succImages: 134  totalImages: 138
+attacking image index : 152
+chose pseudorandom target class: 7
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0740 lr 1.00E-02 eps 0.031 (time 7.2287)
+[log] early stopping at iteration 3
+clipimage succImages: 135  totalImages: 139
+attacking image index : 153
+chose pseudorandom target class: 8
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -2.4032 lr 1.00E-02 eps 0.031 (time 7.3227)
+Step 00010: loss -8.1947 lr 1.00E-02 eps 0.031 (time 0.2112)
+Step 00020: loss -9.6199 lr 1.00E-02 eps 0.031 (time 0.1485)
+[log] early stopping at iteration 23
+clipimage succImages: 136  totalImages: 140
+attacking image index : 154
+chose pseudorandom target class: 9
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -8.6730 lr 1.00E-02 eps 0.031 (time 7.2167)
+[log] early stopping at iteration 2
+clipimage succImages: 137  totalImages: 141
+attacking image index : 155
+chose pseudorandom target class: 4
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -13.9302 lr 1.00E-02 eps 0.031 (time 7.5638)
+[log] early stopping at iteration 2
+clipimage succImages: 138  totalImages: 142
+attacking image index : 156
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -3.5771 lr 1.00E-02 eps 0.031 (time 7.3324)
+[log] early stopping at iteration 3
+clipimage succImages: 139  totalImages: 143
+attacking image index : 157
+chose pseudorandom target class: 8
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -1.9245 lr 1.00E-02 eps 0.031 (time 7.2911)
+Step 00010: loss -7.7324 lr 1.00E-02 eps 0.031 (time 0.1815)
+Step 00020: loss -8.9372 lr 1.00E-02 eps 0.031 (time 0.1102)
+[log] Annealing max_lr
+Step 00030: loss -9.5739 lr 5.00E-03 eps 0.031 (time 0.1368)
+[log] early stopping at iteration 35
+clipimage succImages: 140  totalImages: 144
+attacking image index : 158
+chose pseudorandom target class: 8
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -13.6746 lr 1.00E-02 eps 0.031 (time 7.6222)
+[log] early stopping at iteration 2
+clipimage succImages: 141  totalImages: 145
+attacking image index : 159
+chose pseudorandom target class: 7
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.9144 lr 1.00E-02 eps 0.031 (time 7.8991)
+Step 00010: loss -5.8750 lr 1.00E-02 eps 0.031 (time 0.1854)
+[log] early stopping at iteration 15
+clipimage succImages: 142  totalImages: 146
+attacking image index : 160
+chose pseudorandom target class: 8
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -1.5961 lr 1.00E-02 eps 0.031 (time 7.6021)
+[log] early stopping at iteration 3
+clipimage succImages: 143  totalImages: 147
+attacking image index : 161
+chose pseudorandom target class: 3
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -5.7528 lr 1.00E-02 eps 0.031 (time 7.6601)
+Step 00010: loss -13.5904 lr 1.00E-02 eps 0.031 (time 0.1461)
+[log] Annealing max_lr
+Step 00020: loss -14.8405 lr 5.00E-03 eps 0.031 (time 0.1338)
+[log] early stopping at iteration 26
+clipimage succImages: 144  totalImages: 148
+attacking image index : 162
+chose pseudorandom target class: 2
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.4214 lr 1.00E-02 eps 0.031 (time 7.8037)
+[log] early stopping at iteration 2
+clipimage succImages: 145  totalImages: 149
+attacking image index : 163
+chose pseudorandom target class: 1
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0164 lr 1.00E-02 eps 0.031 (time 7.9778)
+[log] early stopping at iteration 9
+clipimage succImages: 146  totalImages: 150
+attacking image index : 164
+chose pseudorandom target class: 2
+Called
+restored
+skip the wrong example  164
+clipimage succImages: 146  totalImages: 150
+attacking image index : 165
+chose pseudorandom target class: 0
+Called
+restored
+skip the wrong example  165
+clipimage succImages: 146  totalImages: 150
+attacking image index : 166
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -5.0889 lr 1.00E-02 eps 0.031 (time 7.8823)
+[log] early stopping at iteration 9
+clipimage succImages: 147  totalImages: 151
+attacking image index : 167
+chose pseudorandom target class: 1
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -5.8199 lr 1.00E-02 eps 0.031 (time 7.8130)
+[log] early stopping at iteration 3
+clipimage succImages: 148  totalImages: 152
+attacking image index : 168
+chose pseudorandom target class: 9
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -5.3722 lr 1.00E-02 eps 0.031 (time 7.8087)
+[log] early stopping at iteration 10
+clipimage succImages: 149  totalImages: 153
+attacking image index : 169
+chose pseudorandom target class: 3
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -4.8510 lr 1.00E-02 eps 0.031 (time 8.0501)
+[log] early stopping at iteration 6
+clipimage succImages: 150  totalImages: 154
+attacking image index : 170
+chose pseudorandom target class: 7
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -1.7757 lr 1.00E-02 eps 0.031 (time 8.2687)
+[log] early stopping at iteration 9
+clipimage succImages: 151  totalImages: 155
+attacking image index : 171
+chose pseudorandom target class: 0
+Called
+restored
+skip the wrong example  171
+clipimage succImages: 151  totalImages: 155
+attacking image index : 172
+chose pseudorandom target class: 2
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -11.9691 lr 1.00E-02 eps 0.031 (time 8.2962)
+[log] early stopping at iteration 5
+clipimage succImages: 152  totalImages: 156
+attacking image index : 173
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -3.3279 lr 1.00E-02 eps 0.031 (time 8.0366)
+[log] early stopping at iteration 4
+clipimage succImages: 153  totalImages: 157
+attacking image index : 174
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0862 lr 1.00E-02 eps 0.031 (time 8.4254)
+Step 00010: loss -2.5114 lr 1.00E-02 eps 0.031 (time 0.1029)
+Step 00020: loss -5.2214 lr 1.00E-02 eps 0.031 (time 0.2020)
+Step 00030: loss -5.8059 lr 1.00E-02 eps 0.031 (time 0.1908)
+[log] early stopping at iteration 33
+clipimage succImages: 154  totalImages: 158
+attacking image index : 175
+chose pseudorandom target class: 4
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.8384 lr 1.00E-02 eps 0.031 (time 8.3356)
+Step 00010: loss -6.6131 lr 1.00E-02 eps 0.031 (time 0.2390)
+Step 00020: loss -8.0644 lr 1.00E-02 eps 0.031 (time 0.1079)
+[log] early stopping at iteration 23
+clipimage succImages: 155  totalImages: 159
+attacking image index : 176
+chose pseudorandom target class: 0
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -1.6573 lr 1.00E-02 eps 0.031 (time 8.4650)
+[log] early stopping at iteration 3
+clipimage succImages: 156  totalImages: 160
+attacking image index : 177
+chose pseudorandom target class: 1
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -7.1187 lr 1.00E-02 eps 0.031 (time 8.1878)
+Step 00010: loss -11.9038 lr 1.00E-02 eps 0.031 (time 0.0993)
+[log] early stopping at iteration 11
+clipimage succImages: 157  totalImages: 161
+attacking image index : 178
+chose pseudorandom target class: 6
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -15.6694 lr 1.00E-02 eps 0.031 (time 8.1832)
+[log] early stopping at iteration 3
+clipimage succImages: 158  totalImages: 162
+attacking image index : 179
+chose pseudorandom target class: 9
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -2.4167 lr 1.00E-02 eps 0.031 (time 8.1331)
+Step 00010: loss -9.1292 lr 1.00E-02 eps 0.031 (time 0.1147)
+[log] early stopping at iteration 13
+clipimage succImages: 159  totalImages: 163
+attacking image index : 180
+chose pseudorandom target class: 1
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -8.2306 lr 1.00E-02 eps 0.031 (time 8.4573)
+[log] early stopping at iteration 5
+clipimage succImages: 160  totalImages: 164
+attacking image index : 181
+chose pseudorandom target class: 9
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -6.5700 lr 1.00E-02 eps 0.031 (time 8.5797)
+Step 00010: loss -13.1666 lr 1.00E-02 eps 0.031 (time 0.1014)
+[log] early stopping at iteration 11
+clipimage succImages: 161  totalImages: 165
+attacking image index : 182
+chose pseudorandom target class: 9
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.1862 lr 1.00E-02 eps 0.031 (time 8.7046)
+Step 00010: loss -3.2456 lr 1.00E-02 eps 0.031 (time 0.2018)
+Step 00020: loss -4.6007 lr 1.00E-02 eps 0.031 (time 0.1040)
+[log] early stopping at iteration 23
+clipimage succImages: 162  totalImages: 166
+attacking image index : 183
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -2.2258 lr 1.00E-02 eps 0.031 (time 8.6265)
+[log] early stopping at iteration 6
+clipimage succImages: 163  totalImages: 167
+attacking image index : 184
+chose pseudorandom target class: 4
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -6.3876 lr 1.00E-02 eps 0.031 (time 8.7649)
+[log] early stopping at iteration 9
+clipimage succImages: 164  totalImages: 168
+attacking image index : 185
+chose pseudorandom target class: 0
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -1.6600 lr 1.00E-02 eps 0.031 (time 8.6187)
+Step 00010: loss -6.6112 lr 1.00E-02 eps 0.031 (time 0.1726)
+Step 00020: loss -7.7173 lr 1.00E-02 eps 0.031 (time 0.0995)
+[log] Annealing max_lr
+Step 00030: loss -7.8609 lr 5.00E-03 eps 0.031 (time 0.1371)
+Step 00040: loss -9.1362 lr 5.00E-03 eps 0.031 (time 0.1514)
+[log] Annealing max_lr
+Step 00050: loss -9.6451 lr 2.50E-03 eps 0.031 (time 0.1041)
+Step 00060: loss -10.1449 lr 2.50E-03 eps 0.031 (time 0.1114)
+[log] Annealing max_lr
+Step 00070: loss -10.7073 lr 1.25E-03 eps 0.031 (time 0.1719)
+[log] Annealing max_lr
+[log] early stopping at iteration 80
+clipimage succImages: 165  totalImages: 169
+attacking image index : 186
+chose pseudorandom target class: 1
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0881 lr 1.00E-02 eps 0.031 (time 8.7713)
+Step 00010: loss -1.1115 lr 1.00E-02 eps 0.031 (time 0.1729)
+[log] early stopping at iteration 12
+clipimage succImages: 166  totalImages: 170
+attacking image index : 187
+chose pseudorandom target class: 2
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -5.7576 lr 1.00E-02 eps 0.031 (time 9.1310)
+[log] early stopping at iteration 4
+clipimage succImages: 167  totalImages: 171
+attacking image index : 188
+chose pseudorandom target class: 2
+Called
+restored
+skip the wrong example  188
+clipimage succImages: 167  totalImages: 171
+attacking image index : 189
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -1.4814 lr 1.00E-02 eps 0.031 (time 9.0179)
+[log] early stopping at iteration 4
+clipimage succImages: 168  totalImages: 172
+attacking image index : 190
+chose pseudorandom target class: 8
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -10.0994 lr 1.00E-02 eps 0.031 (time 9.1674)
+[log] early stopping at iteration 3
+clipimage succImages: 169  totalImages: 173
+attacking image index : 191
+chose pseudorandom target class: 1
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -3.6365 lr 1.00E-02 eps 0.031 (time 8.8204)
+Step 00010: loss -8.3841 lr 1.00E-02 eps 0.031 (time 0.2398)
+Step 00020: loss -9.5146 lr 1.00E-02 eps 0.031 (time 0.1474)
+[log] Annealing max_lr
+Step 00030: loss -10.1763 lr 5.00E-03 eps 0.031 (time 0.1129)
+[log] early stopping at iteration 35
+clipimage succImages: 170  totalImages: 174
+attacking image index : 192
+chose pseudorandom target class: 2
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -8.2008 lr 1.00E-02 eps 0.031 (time 8.9723)
+Step 00010: loss -14.5874 lr 1.00E-02 eps 0.031 (time 0.1831)
+[log] early stopping at iteration 15
+clipimage succImages: 171  totalImages: 175
+attacking image index : 193
+chose pseudorandom target class: 6
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -9.8298 lr 1.00E-02 eps 0.031 (time 9.0555)
+[log] early stopping at iteration 3
+clipimage succImages: 172  totalImages: 176
+attacking image index : 194
+chose pseudorandom target class: 1
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -5.4678 lr 1.00E-02 eps 0.031 (time 9.3015)
+[log] early stopping at iteration 9
+clipimage succImages: 173  totalImages: 177
+attacking image index : 195
+chose pseudorandom target class: 9
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -1.1142 lr 1.00E-02 eps 0.031 (time 9.1565)
+[log] early stopping at iteration 3
+clipimage succImages: 174  totalImages: 178
+query-limited.sh: line 1: 400533 Terminated              python main.py --max-queries 400 --img-index 0 --out-dir query_limited/
